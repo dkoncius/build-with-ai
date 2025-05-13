@@ -57,16 +57,18 @@ const CourseDetails = () => {
             </ul>
           </div>
           
-          <div className="ai-card">
+          <div className="ai-card relative bg-white/95 dark:bg-card border border-primary/20 dark:border-border shadow-lg dark:shadow-none">
             <div className="rounded-full bg-primary/10 dark:bg-primary/20 w-12 h-12 flex items-center justify-center mb-4">
               <Star className="h-6 w-6 ai-icon text-primary" />
             </div>
             <h3 className="ai-card-title text-xl mb-3">💰 Kaina</h3>
             <div className="mb-4">
-              <div className="text-3xl font-bold text-primary">€150</div>
+              <div className="text-3xl font-bold text-primary bg-primary/10 rounded-xl px-4 py-2 inline-block shadow-sm">
+                €150
+              </div>
               <div className="ai-card-desc">vienam dalyviui</div>
             </div>
-            <div className="bg-secondary/30 dark:bg-secondary/60 p-4 rounded-lg">
+            <div className="bg-primary/5 dark:bg-secondary/60 p-4 rounded-lg">
               <p className="ai-card-desc text-sm">
                 Į kainą įskaičiuota: visa mokymų programa + prieiga prie ChatGPT licencijos mokymosi metu.
               </p>
