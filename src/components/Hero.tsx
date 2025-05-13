@@ -19,7 +19,7 @@ const Hero = () => {
             </h1>
             
             <p className="ai-section-subtitle text-lg sm:text-xl mb-6 sm:mb-8 font-medium leading-relaxed">
-              🎯 Vaikas ne tik naudoja DI – jis išmoksta kurti, integruoti ir pristatyti savo idėjas.
+              🎯 Vaikas ne tik naudoja AI – jis išmoksta kurti, integruoti ir pristatyti savo idėjas.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
@@ -40,7 +40,7 @@ const Hero = () => {
                   <div className="ai-card animate-float delay-100">
                     <div className="text-xl sm:text-3xl mb-1 sm:mb-2">💻</div>
                     <h3 className="ai-card-title font-bold text-sm sm:text-lg mb-0.5 sm:mb-1">ChatGPT</h3>
-                    <p className="ai-card-desc text-[10px] sm:text-sm leading-tight sm:leading-normal">Promptų inžinerija ir DI asmenybės</p>
+                    <p className="ai-card-desc text-[10px] sm:text-sm leading-tight sm:leading-normal">Promptų inžinerija ir AI asmenybės</p>
                   </div>
                   <div className="ai-card animate-float delay-200">
                     <div className="text-xl sm:text-3xl mb-1 sm:mb-2">🎨</div>

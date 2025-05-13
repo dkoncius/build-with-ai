@@ -1,6 +1,7 @@
 import React from 'react';
 import { Linkedin, Mail, Phone } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import BrainIcon from './BrainIcon';
 
 const Instructor = () => {
   return (
@@ -23,11 +24,11 @@ const Instructor = () => {
                   <p className="ai-card-desc font-medium">AI įrankių ekspertas ir full-stack programuotojas</p>
                 </div>
                 <div className="space-y-2 w-full">
-                  <a href="mailto:as.koncius@gmail.com" className="flex items-center text-primary-foreground hover:text-primary transition-colors">
+                  <a href="mailto:as.koncius@gmail.com" className="flex items-center font-medium text-primary dark:text-primary-foreground hover:underline transition-colors">
                     <Mail className="h-5 w-5 mr-2 ai-icon" />
                     <span>as.koncius@gmail.com</span>
                   </a>
-                  <a href="tel:+37064300602" className="flex items-center text-primary-foreground hover:text-primary transition-colors">
+                  <a href="tel:+37064300602" className="flex items-center font-medium text-primary dark:text-primary-foreground hover:underline transition-colors">
                     <Phone className="h-5 w-5 mr-2 ai-icon" />
                     <span>+370 643 00602</span>
                   </a>
@@ -35,7 +36,7 @@ const Instructor = () => {
                     href="https://www.linkedin.com/in/deividas-koncius/" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="flex items-center text-primary-foreground hover:text-primary transition-colors"
+                    className="flex items-center font-medium text-primary dark:text-primary-foreground hover:underline transition-colors"
                   >
                     <Linkedin className="h-5 w-5 mr-2 ai-icon" />
                     <span>LinkedIn</span>
@@ -67,11 +68,11 @@ const Instructor = () => {
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary font-bold mr-2">•</span>
-                    <span>Šiuo metu kuria <strong>160 val. AI programą viešajam ugdymui</strong> ir <strong>16 val. AI kursą verslui</strong> – efektyvesniam darbui ir DI integracijai</span>
+                    <span>Šiuo metu kuria <strong>160 val. AI programą viešajam ugdymui</strong> ir <strong>16 val. AI kursą verslui</strong> – efektyvesniam darbui ir AI integracijai</span>
                   </li>
                 </ul>
                 <div className="bg-secondary/30 dark:bg-secondary/60 p-4 rounded-lg italic ai-card-desc">
-                  „Build with AI moko vaikus naudoti DI ne kaip žaislą, o kaip žinių ir idėjų variklį."
+                  „Build with AI moko vaikus naudoti AI ne kaip žaislą, o kaip žinių ir idėjų variklį."
                 </div>
               </div>
             </div>

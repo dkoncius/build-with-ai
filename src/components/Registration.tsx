@@ -11,7 +11,7 @@ const Registration = () => {
           </p>
           <div className="ai-card mb-8">
             <div className="text-5xl mb-4">🚀</div>
-            <h3 className="ai-card-title text-2xl font-bold mb-4">Pradėkite kelionę į DI pasaulį jau dabar!</h3>
+            <h3 className="ai-card-title text-2xl font-bold mb-4">Pradėkite kelionę į AI pasaulį jau dabar!</h3>
             <p className="ai-card-desc mb-6">
               Registruokitės užpildydami formą ir netrukus susisieksime su jumis dėl detalių.
             </p>

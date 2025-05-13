@@ -44,7 +44,7 @@ const CourseDetails = () => {
               </li>
               <li className="flex items-start">
                 <span className="mr-2">•</span>
-                <span>Norintiems išmokti naudoti DI mokslams ir kūrybai</span>
+                <span>Norintiems išmokti naudoti AI mokslams ir kūrybai</span>
               </li>
               <li className="flex items-start">
                 <span className="mr-2">•</span>

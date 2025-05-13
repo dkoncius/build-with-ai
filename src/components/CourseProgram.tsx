@@ -7,7 +7,7 @@ const CourseProgram = () => {
       description: 'ChatGPT ir Gemini – klausimų formulavimas, rezultato tikslumas'
     },
     {
-      title: 'Kūryba su DI',
+      title: 'Kūryba su AI',
       description: 'Tekstai, vaizdai, garsas, istorijų ir idėjų vizualizacija'
     },
     {
