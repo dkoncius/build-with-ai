@@ -1,82 +1,76 @@
-
 import React from 'react';
 import { Linkedin, Mail, Phone } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const Instructor = () => {
   return (
-    <section id="instructor" className="ai-section">
+    <section id="instructor" className="ai-section bg-background">
       <div className="ai-container">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div className="ai-card p-0 overflow-hidden">
             <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/3 bg-gradient-to-br from-aipurple to-aipurple-dark p-8 text-white">
-                <h2 className="text-2xl md:text-3xl font-bold mb-6">🎓 Programos autorius</h2>
-                
+              <div className="md:w-1/3 ai-gradient-bg p-8 text-primary-foreground flex flex-col items-center md:items-start">
+                <h2 className="ai-section-title text-2xl md:text-3xl mb-6">🎓 Programos autorius</h2>
                 <div className="mb-6">
-                  <div className="w-32 h-32 rounded-full overflow-hidden mb-4 mx-auto md:mx-0">
+                  <div className="w-32 h-32 rounded-full overflow-hidden mb-4 mx-auto md:mx-0 border-4 border-primary/40 dark:border-primary/60">
                     <img 
                       src="/lovable-uploads/3bf5b898-b8e0-4b8f-9091-83f6429b054f.png" 
                       alt="Deividas Koncius"
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="text-xl font-bold">Deividas Koncius</h3>
-                  <p className="text-white/80 font-medium">AI įrankių ekspertas ir full-stack programuotojas</p>
+                  <h3 className="ai-card-title text-xl font-bold">Deividas Koncius</h3>
+                  <p className="ai-card-desc font-medium">AI įrankių ekspertas ir full-stack programuotojas</p>
                 </div>
-                
-                <div className="space-y-2">
-                  <a href="mailto:as.koncius@gmail.com" className="flex items-center text-white/90 hover:text-white transition-colors">
-                    <Mail className="h-5 w-5 mr-2" />
+                <div className="space-y-2 w-full">
+                  <a href="mailto:as.koncius@gmail.com" className="flex items-center text-primary-foreground hover:text-primary transition-colors">
+                    <Mail className="h-5 w-5 mr-2 ai-icon" />
                     <span>as.koncius@gmail.com</span>
                   </a>
-                  <a href="tel:+37064300602" className="flex items-center text-white/90 hover:text-white transition-colors">
-                    <Phone className="h-5 w-5 mr-2" />
+                  <a href="tel:+37064300602" className="flex items-center text-primary-foreground hover:text-primary transition-colors">
+                    <Phone className="h-5 w-5 mr-2 ai-icon" />
                     <span>+370 643 00602</span>
                   </a>
                   <a 
                     href="https://www.linkedin.com/in/deividas-koncius/" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="flex items-center text-white/90 hover:text-white transition-colors"
+                    className="flex items-center text-primary-foreground hover:text-primary transition-colors"
                   >
-                    <Linkedin className="h-5 w-5 mr-2" />
+                    <Linkedin className="h-5 w-5 mr-2 ai-icon" />
                     <span>LinkedIn</span>
                   </a>
                 </div>
               </div>
-              
               <div className="md:w-2/3 p-8">
-                <h3 className="text-xl font-bold mb-4 text-gray-900">Patirtis ir kvalifikacija</h3>
-                
-                <ul className="space-y-3 text-gray-700 mb-6">
+                <h3 className="ai-card-title text-xl font-bold mb-4">Patirtis ir kvalifikacija</h3>
+                <ul className="space-y-3 ai-card-desc mb-6">
                   <li className="flex items-start">
-                    <span className="text-aipurple font-bold mr-2">•</span>
+                    <span className="text-primary font-bold mr-2">•</span>
                     <span><strong>9+ metų patirtis</strong> skaitmeninio ugdymo ir technologijų srityje</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-aipurple font-bold mr-2">•</span>
+                    <span className="text-primary font-bold mr-2">•</span>
                     <span>Pasiekė daugiau nei <strong>6 000 dalyvių</strong> per atviras AI paskaitas</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-aipurple font-bold mr-2">•</span>
+                    <span className="text-primary font-bold mr-2">•</span>
                     <span>Apmokė <strong>100+ profesionalų</strong> struktūruotose AI programose</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-aipurple font-bold mr-2">•</span>
+                    <span className="text-primary font-bold mr-2">•</span>
                     <span>Vedė <strong>3 mėn. programą su Lietuvos kultūros taryba (LKT)</strong> – AI ir audiovizualinių įrankių taikymas kūrybos sektoriuose</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-aipurple font-bold mr-2">•</span>
+                    <span className="text-primary font-bold mr-2">•</span>
                     <span><strong>Kursuok platformoje</strong> išmokė daugiau nei <strong>50 specialistų</strong> produktyvumo, automatizavimo ir kūrybos su AI</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-aipurple font-bold mr-2">•</span>
+                    <span className="text-primary font-bold mr-2">•</span>
                     <span>Šiuo metu kuria <strong>160 val. AI programą viešajam ugdymui</strong> ir <strong>16 val. AI kursą verslui</strong> – efektyvesniam darbui ir DI integracijai</span>
                   </li>
                 </ul>
-                
-                <div className="bg-gray-50 p-4 rounded-lg italic text-gray-700">
+                <div className="bg-secondary/30 dark:bg-secondary/60 p-4 rounded-lg italic ai-card-desc">
                   „Build with AI moko vaikus naudoti DI ne kaip žaislą, o kaip žinių ir idėjų variklį."
                 </div>
               </div>

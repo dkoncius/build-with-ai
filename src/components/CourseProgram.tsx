@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const CourseProgram = () => {
@@ -30,27 +29,27 @@ const CourseProgram = () => {
   ];
 
   return (
-    <section id="program" className="ai-section bg-gradient-to-br from-aipurple-light/30 via-white to-aiblue-light/20">
+    <section id="program" className="ai-section ai-gradient-bg">
       <div className="ai-container">
         <div className="max-w-2xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">📚 Programa</h2>
-          <p className="text-lg text-gray-700">5 savaičių kursas, 30 akademinių valandų praktinės kūrybos</p>
+          <h2 className="ai-section-title text-3xl md:text-4xl mb-6">📚 Programa</h2>
+          <p className="ai-section-subtitle text-lg">5 savaičių kursas, 30 akademinių valandų praktinės kūrybos</p>
         </div>
         
-        <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div className="bg-card rounded-2xl shadow-lg overflow-hidden border border-border dark:border-border">
           <div className="overflow-x-auto">
             <table className="w-full min-w-full">
               <thead>
-                <tr className="bg-aipurple text-white">
+                <tr className="bg-primary text-primary-foreground">
                   <th className="py-4 px-6 text-left font-heading text-lg">Tema</th>
                   <th className="py-4 px-6 text-left font-heading text-lg">Veikla</th>
                 </tr>
               </thead>
               <tbody>
                 {programItems.map((item, index) => (
-                  <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                    <td className="py-4 px-6 border-b border-gray-100 font-medium">{item.title}</td>
-                    <td className="py-4 px-6 border-b border-gray-100 text-gray-700">{item.description}</td>
+                  <tr key={index} className={index % 2 === 0 ? 'bg-card' : 'bg-secondary/40 dark:bg-secondary/60'}>
+                    <td className="py-4 px-6 border-b border-border font-medium text-foreground">{item.title}</td>
+                    <td className="py-4 px-6 border-b border-border text-muted-foreground">{item.description}</td>
                   </tr>
                 ))}
               </tbody>

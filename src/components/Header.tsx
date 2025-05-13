@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { Brain, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import BrainIcon from './BrainIcon';
 import {
   Drawer,
   DrawerContent,
   DrawerHeader,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,11 +20,11 @@ const Header = () => {
   ];
 
   return (
-    <header className="py-4 px-4 sm:px-6 lg:px-8 bg-white border-b border-gray-100 sticky top-0 z-50">
+    <header className="py-4 px-4 sm:px-6 lg:px-8 bg-background border-b border-border sticky top-0 z-50">
       <div className="container max-w-7xl mx-auto flex justify-between items-center">
         <div className="flex items-center">
-          <Brain className="h-8 w-8 text-aipurple mr-2" />
-          <span className="font-heading font-bold text-xl text-aiblue-dark">Build with AI</span>
+          <BrainIcon className="h-8 w-8 text-primary mr-2" />
+          <span className="font-heading font-bold text-xl text-foreground">Build with AI</span>
         </div>
         
         {/* Desktop Navigation */}
@@ -34,20 +36,22 @@ const Header = () => {
               className={`text-sm font-medium ${
                 item.isButton
                   ? "ai-button-primary"
-                  : "text-gray-700 hover:text-aipurple transition-colors"
+                  : "text-foreground hover:text-primary transition-colors"
               }`}
             >
               {item.label}
             </a>
           ))}
+          <ThemeToggle />
         </nav>
         
         {/* Mobile Navigation */}
         <div className="md:hidden flex items-center gap-4">
+          <ThemeToggle />
           <Drawer open={isOpen} onOpenChange={setIsOpen}>
             <DrawerTrigger asChild>
-              <button className="p-2 hover:bg-gray-100 rounded-md transition-colors">
-                <Menu className="h-6 w-6 text-gray-700" />
+              <button className="p-2 hover:bg-muted rounded-md transition-colors">
+                <Menu className="h-6 w-6 text-foreground" />
                 <span className="sr-only">Atidaryti meniu</span>
               </button>
             </DrawerTrigger>
@@ -55,14 +59,14 @@ const Header = () => {
               <DrawerHeader className="border-b pb-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
-                    <Brain className="h-8 w-8 text-aipurple mr-2" />
-                    <span className="font-heading font-bold text-xl text-aiblue-dark">Build with AI</span>
+                    <BrainIcon className="h-8 w-8 text-primary mr-2" />
+                    <span className="font-heading font-bold text-xl text-foreground">Build with AI</span>
                   </div>
                   <button
                     onClick={() => setIsOpen(false)}
-                    className="p-2 hover:bg-gray-100 rounded-md transition-colors"
+                    className="p-2 hover:bg-muted rounded-md transition-colors"
                   >
-                    <X className="h-6 w-6 text-gray-700" />
+                    <X className="h-6 w-6 text-foreground" />
                     <span className="sr-only">Uždaryti meniu</span>
                   </button>
                 </div>
@@ -76,7 +80,7 @@ const Header = () => {
                     className={`text-base font-medium ${
                       item.isButton
                         ? "ai-button-primary w-full text-center"
-                        : "text-gray-700 hover:text-aipurple transition-colors"
+                        : "text-foreground hover:text-primary transition-colors"
                     }`}
                   >
                     {item.label}
