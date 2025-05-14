@@ -118,11 +118,6 @@ const RegistrationForm = () => {
             <h2 className="text-3xl font-bold mb-4">Ačiū už registraciją!</h2>
             <p className="text-lg">Netrukus susisieksime su Jumis dėl detalių.</p>
           </div>
-          
-          {/* Theme toggle at the bottom */}
-          <div className="flex justify-center mt-8">
-            <ThemeToggle />
-          </div>
         </div>
       </div>
     );
