@@ -42,15 +42,6 @@ const Instructor = () => {
                     <Linkedin className="h-5 w-5 mr-2 ai-icon" />
                     <span>LinkedIn</span>
                   </a>
-                  <a 
-                    href="https://www.youtube.com/@DeividasKoncius" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="flex items-center font-medium text-primary dark:text-primary-foreground hover:underline transition-colors"
-                  >
-                    <Youtube className="h-5 w-5 mr-2 ai-icon" />
-                    <span>YouTube</span>
-                  </a>
                 </div>
               </div>
               <div className="md:w-2/3 p-8">
