@@ -203,7 +203,7 @@ const Partners = () => {
         <Card className="p-6 mb-10">
           <h2 className="text-2xl font-bold mb-4">Pasidalink "Build with AI" kursais moksleiviams</h2>
           <p className="mb-6">
-            Pasidalink "Build with AI" kursais moksleiviams su savo draugais ar kolegomis – ir gauk padėką, kuri verta dėmesio.
+            Pasidalink "Build with AI" kursais moksleiviams su savo draugais ar kolegomis – ir gauk dovaną, kuri verta dėmesio.
           </p>
           
           <div className="bg-muted p-4 rounded-lg mb-6">
@@ -225,7 +225,7 @@ const Partners = () => {
           <ol className="list-decimal list-inside mb-6 space-y-2">
             <li>Užsiregistruok žemiau pateiktoje formoje</li>
             <li>Gauk savo <strong>unikalią nuorodą</strong> ir <strong>kodą</strong></li>
-            <li>Pasidalink – kai du žmonės užsiregistruos, informuosime Tave apie dovaną</li>
+            <li>Pasidalink – kai žmogus užsiregistruos ir susimokės, informuosime Tave apie dovaną</li>
           </ol>
           
           <div className="bg-yellow-100 dark:bg-yellow-900 p-4 rounded-lg mb-6">
