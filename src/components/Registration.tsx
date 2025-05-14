@@ -10,6 +10,17 @@ const Registration = () => {
             <strong>Grupė ribota – iki 20 vaikų.</strong>
           </p>
           <div className="ai-card mb-8">
+            <div className="text-5xl mb-4">🗓️</div>
+            <h3 className="ai-card-title text-2xl font-bold mb-4">Nauja grupė startuoja nuo birželio!</h3>
+            <p className="ai-card-desc font-semibold mb-3">
+              Pirmadieniais ir trečiadieniais, 18:00-21:00 val.
+            </p>
+            <p className="ai-card-desc mb-4">
+              Liko tik kelios laisvos vietos. Registruokitės dabar!
+            </p>
+          </div>
+          
+          <div className="ai-card mb-8">
             <div className="text-5xl mb-4">🚀</div>
             <h3 className="ai-card-title text-2xl font-bold mb-4">Pradėkite kelionę į AI pasaulį jau dabar!</h3>
             <p className="ai-card-desc mb-6">

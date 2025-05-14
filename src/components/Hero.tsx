@@ -15,11 +15,11 @@ const Hero = () => {
             </div>
             
             <h1 className="ai-section-title text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
-              🧠 Build with AI: <span className="text-primary">Mokymai, kurie padeda mokytis</span>
+              Build with AI: <span className="text-primary">Mokymai, kurie padeda mokytis</span>
             </h1>
             
             <p className="ai-section-subtitle text-lg sm:text-xl mb-6 sm:mb-8 font-medium leading-relaxed">
-              🎯 Vaikas ne tik naudoja AI – jis išmoksta kurti, integruoti ir pristatyti savo idėjas.
+              🎯 Mokinys ne tik naudos AI – jis išmoks kurti, integruoti ir pristatyti savo idėjas.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">

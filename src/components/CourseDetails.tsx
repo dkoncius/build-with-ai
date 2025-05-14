@@ -23,11 +23,11 @@ const CourseDetails = () => {
               </li>
               <li className="flex items-start">
                 <span className="mr-2">⏱️</span>
-                <span>5 savaitės | 2 kartai per savaitę | po 3 val.</span>
+                <span>4 savaitės | 2 kartai per savaitę | po 3 val.</span>
               </li>
               <li className="flex items-start">
                 <span className="mr-2">📚</span>
-                <span>Iš viso – <strong>30 akademinių valandų praktinės kūrybos</strong></span>
+                <span>Iš viso – <strong>24 valandų praktinės kūrybos</strong></span>
               </li>
             </ul>
           </div>

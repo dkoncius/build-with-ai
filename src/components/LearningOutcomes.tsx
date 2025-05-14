@@ -5,8 +5,8 @@ const LearningOutcomes = () => {
     <section className="ai-section bg-background">
       <div className="ai-container">
         <div className="max-w-2xl mx-auto mb-12 text-center">
-          <h2 className="ai-section-title text-3xl md:text-4xl mb-6">📌 Ką vaikas išmoksta?</h2>
-          <p className="ai-section-subtitle text-lg">Praktiniai įgūdžiai ir žinios, kuriuos įgis jūsų vaikas</p>
+          <h2 className="ai-section-title text-3xl md:text-4xl mb-6">📌 Ko kartu išmoksime?</h2>
+          <p className="ai-section-subtitle text-lg">Praktiniai įgūdžiai ir žinios, kuriuos įgis kiekvienas dalyvis</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

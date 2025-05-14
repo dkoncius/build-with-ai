@@ -37,7 +37,7 @@ const Index = () => {
 
   useEffect(() => {
     // Update document title
-    document.title = "Build with AI | Mokymai 9-13 m. moksleiviams";
+    document.title = "Build with AI | Mokymai, kurie padeda mokytis";
   }, []);
 
   return (

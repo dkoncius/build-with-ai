@@ -33,7 +33,7 @@ const CourseProgram = () => {
       <div className="ai-container">
         <div className="max-w-2xl mx-auto text-center mb-12">
           <h2 className="ai-section-title text-3xl md:text-4xl mb-6">📚 Programa</h2>
-          <p className="ai-section-subtitle text-lg">5 savaičių kursas, 30 akademinių valandų praktinės kūrybos</p>
+          <p className="ai-section-subtitle text-lg">4 savaičių kursas, 24 valandų praktinės kūrybos</p>
         </div>
         
         <div className="bg-card rounded-2xl shadow-lg overflow-hidden border border-border dark:border-border">
