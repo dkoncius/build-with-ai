@@ -208,7 +208,7 @@ const Partners = () => {
           
           <div className="bg-muted p-4 rounded-lg mb-6">
             <h3 className="font-bold text-xl mb-3">Ką siūlome:</h3>
-            <p className="mb-2">Už kiekvienus 2 žmones, kurie užsiregistruos ir apmokės kursą naudodami Tavo asmeninę nuorodą ar referalo kodą, galėsi pasirinkti vieną iš šių dovanų:</p>
+            <p className="mb-2">Už kiekvieną žmogų, kuris užsiregistruos ir apmokės kursą naudodamas Tavo asmeninę referalo nuorodą ar kodą, galėsi pasirinkti vieną iš šių dovanų:</p>
             <ul className="mb-4 space-y-2">
               <li className="flex items-center">
                 <div className="h-8 w-8 rounded-full bg-primary text-white flex items-center justify-center font-bold mr-2">1</div>
@@ -281,7 +281,7 @@ const Partners = () => {
               </div>
               <div className="bg-green-100 dark:bg-green-900 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Kas toliau?</h3>
-                <p>Pasidalinkite šiuo kodu ar nuoroda su draugais. Kai 2 žmonės užsiregistruos naudodami Jūsų kodą ar nuorodą, susisieksime su Jumis dėl atlygio.</p>
+                <p>Pasidalinkite šiuo kodu ar nuoroda su draugais. Kai žmogus užsiregistruos ir sumokės už kursą naudodamas jūsų referalo kodą ar nuorodą, susisieksime su Jumis dėl atlygio.</p>
               </div>
 
               {/* Referral statistics */}
@@ -437,7 +437,7 @@ const Partners = () => {
               </div>
               <div className="bg-green-100 dark:bg-green-900 p-4 rounded-lg">
                 <h3 className="font-bold mb-2">Kas toliau?</h3>
-                <p>Pasidalinkite šiuo kodu ar nuoroda su draugais. Kai 2 žmonės užsiregistruos naudodami Jūsų kodą ar nuorodą, susisieksime su Jumis dėl atlygio.</p>
+                <p>Pasidalinkite šiuo kodu ar nuoroda su draugais. Kai žmogus užsiregistruos ir sumokės už kursą naudodamas jūsų referalo kodą ar nuorodą, susisieksime su Jumis dėl atlygio.</p>
               </div>
             </div>
           </Card>
