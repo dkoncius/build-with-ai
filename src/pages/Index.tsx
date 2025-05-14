@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
@@ -8,6 +7,7 @@ import CourseProgram from '@/components/CourseProgram';
 import Instructor from '@/components/Instructor';
 import Registration from '@/components/Registration';
 import Footer from '@/components/Footer';
+import { checkAndStoreReferralCode } from '@/lib/referralUtils';
 
 const Index = () => {
   // Smooth scroll for anchor links
@@ -38,6 +38,14 @@ const Index = () => {
   useEffect(() => {
     // Update document title
     document.title = "Build with AI | Mokymai, kurie padeda mokytis";
+    
+    // Check for referral code in URL and store it
+    const refCode = checkAndStoreReferralCode();
+    if (refCode) {
+      console.log(`Referral code found: ${refCode}`);
+      // In a full implementation, you might want to show a toast notification
+      // or otherwise indicate that a referral code was detected
+    }
   }, []);
 
   return (

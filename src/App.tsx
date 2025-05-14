@@ -6,6 +6,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import Partners from "./pages/Partners";
+import RegistrationForm from "./pages/RegistrationForm";
+import Dashboard from "./pages/Dashboard";
+import Refund from "./pages/Refund";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +28,10 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/partneriai" element={<Partners />} />
+            <Route path="/registracija" element={<RegistrationForm />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/pinigu-grazinimas" element={<Refund />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

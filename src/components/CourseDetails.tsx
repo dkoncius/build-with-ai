@@ -19,7 +19,7 @@ const CourseDetails = () => {
             <ul className="space-y-2 ai-card-desc">
               <li className="flex items-start">
                 <span className="mr-2">💻</span>
-                <span>Nuotoliniu būdu per „Teams" – patogu iš namų</span>
+                <span>Nuotoliniu būdu per "Teams" – patogu iš namų</span>
               </li>
               <li className="flex items-start">
                 <span className="mr-2">⏱️</span>
@@ -69,8 +69,11 @@ const CourseDetails = () => {
               <div className="ai-card-desc">vienam dalyviui</div>
             </div>
             <div className="bg-primary/5 dark:bg-secondary/60 p-4 rounded-lg">
-              <p className="ai-card-desc text-sm">
+              <p className="ai-card-desc text-sm mb-2">
                 Į kainą įskaičiuota: visa mokymų programa + prieiga prie ChatGPT licencijos mokymosi metu.
+              </p>
+              <p className="ai-card-desc text-sm font-semibold">
+                Mokėjimas atliekamas visa suma iškarto.
               </p>
             </div>
           </div>

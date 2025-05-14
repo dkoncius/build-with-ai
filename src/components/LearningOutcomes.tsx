@@ -46,7 +46,7 @@ const LearningOutcomes = () => {
             <div className="text-2xl mr-4">🎯</div>
             <div>
               <h3 className="ai-card-title font-bold text-lg mb-2">Finalinis rezultatas</h3>
-              <p className="ai-card-desc">Pristatymas su Gamma: savo darbo ir įgūdžių prezentacija, demonstruojanti įgytas kompetencijas</p>
+              <p className="ai-card-desc">Pristatymas su Gamma: savo darbo ir įgūdžių prezentacija, demonstruojanti įgytas kompetencijas ir veikiančius sprendimus</p>
             </div>
           </div>
         </div>
