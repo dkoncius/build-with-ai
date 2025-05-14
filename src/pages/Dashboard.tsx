@@ -17,7 +17,8 @@ import {
   where,
   orderBy,
   getDoc,
-  Timestamp
+  Timestamp,
+  deleteDoc
 } from 'firebase/firestore';
 
 // Define interfaces for type safety
@@ -156,6 +157,20 @@ const Dashboard = () => {
     setIsAuthenticated(false);
   };
 
+  // Delete registration
+  const deleteRegistration = async (id: string) => {
+    if (window.confirm('Ar tikrai norite ištrinti šią registraciją? Šio veiksmo nebus galima atšaukti.')) {
+      try {
+        await deleteDoc(doc(db, "registrations", id));
+        // Update local state
+        setRegistrations(registrations.filter(reg => reg.id !== id));
+      } catch (error) {
+        console.error("Klaida trinant registraciją: ", error);
+        alert('Nepavyko ištrinti registracijos. Bandykite dar kartą.');
+      }
+    }
+  };
+
   // Login form
   if (!isAuthenticated) {
     return (
@@ -182,7 +197,7 @@ const Dashboard = () => {
 
   return (
     <div className="ai-container py-8">
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex justify-between flex-wrap gap-5 items-center mb-6">
         <h1 className="text-3xl font-bold">Registracijų valdymo panelė</h1>
         <div className="flex items-center gap-2">
           <ThemeToggle />
@@ -201,7 +216,7 @@ const Dashboard = () => {
           </ul>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-4 mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
           <div>
             <Label htmlFor="search">Paieška</Label>
             <Input 
@@ -214,25 +229,28 @@ const Dashboard = () => {
           
           <div>
             <Label>Filtruoti pagal apmokėjimą</Label>
-            <div className="flex space-x-4 mt-2">
+            <div className="flex flex-wrap gap-2 mt-2">
               <Button 
                 variant={filterPaid === null ? "default" : "outline"}
                 onClick={() => setFilterPaid(null)}
-                className="flex-1"
+                className="flex-1 min-w-[80px] px-0"
+                size="sm"
               >
                 Visi
               </Button>
               <Button 
                 variant={filterPaid === true ? "default" : "outline"}
                 onClick={() => setFilterPaid(true)}
-                className="flex-1"
+                className="flex-1 min-w-[80px] px-5"
+                size="sm"
               >
                 Apmokėta
               </Button>
               <Button 
                 variant={filterPaid === false ? "default" : "outline"}
                 onClick={() => setFilterPaid(false)}
-                className="flex-1"
+                className="flex-1 min-w-[80px] px-10"
+                size="sm"
               >
                 Neapmokėta
               </Button>
@@ -260,10 +278,12 @@ const Dashboard = () => {
               </Card>
             ) : (
               filteredRegistrations.map((registration) => (
-                <Card key={registration.id} className="p-6">
-                  <div className="grid md:grid-cols-2 gap-6">
+                <Card key={registration.id} className="p-4 sm:p-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                     <div>
-                      <h3 className="text-xl font-bold mb-2">{registration.name || 'Be vardo'}</h3>
+                      <div className="flex justify-between">
+                        <h3 className="text-xl font-bold mb-2">{registration.name || 'Be vardo'}</h3>
+                      </div>
                       <div className="space-y-1 mb-4">
                         <div><strong>Amžius:</strong> {registration.age}</div>
                         <div><strong>Tėvų el. paštas:</strong> {registration.parentEmail}</div>
@@ -274,20 +294,29 @@ const Dashboard = () => {
                         <div><strong>Užsiregistruota:</strong> {registration.createdAt?.toDate().toLocaleString('lt-LT') || 'Nėra datos'}</div>
                       </div>
                       
-                      <div className="flex items-center space-x-2">
-                        <Checkbox 
-                          id={`paid-${registration.id}`}
-                          checked={registration.paid || false}
-                          onCheckedChange={() => togglePaymentStatus(registration.id, registration.paid || false)}
-                        />
-                        <Label htmlFor={`paid-${registration.id}`} className="font-bold">
-                          {registration.paid ? 'Apmokėta' : 'Neapmokėta'}
-                        </Label>
+                      <div className="flex flex-wrap items-center gap-2">
+                        <div className="flex items-center space-x-2">
+                          <Checkbox 
+                            id={`paid-${registration.id}`}
+                            checked={registration.paid || false}
+                            onCheckedChange={() => togglePaymentStatus(registration.id, registration.paid || false)}
+                          />
+                          <Label htmlFor={`paid-${registration.id}`} className="font-bold">
+                            {registration.paid ? 'Apmokėta' : 'Neapmokėta'}
+                          </Label>
+                        </div>
+                        <Button 
+                          variant="destructive" 
+                          size="sm"
+                          onClick={() => deleteRegistration(registration.id)}
+                        >
+                          Ištrinti
+                        </Button>
                       </div>
                     </div>
                     
                     {registration.referral && (
-                      <div className="bg-muted p-4 rounded-lg">
+                      <div className="bg-muted p-3 sm:p-4 rounded-lg">
                         <h4 className="font-bold mb-2">Referalo informacija</h4>
                         <div><strong>Kodas:</strong> {registration.referral}</div>
                         
