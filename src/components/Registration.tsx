@@ -23,17 +23,6 @@ const Registration = () => {
   return (
     <section id="register" className="ai-section ai-gradient-bg">
       <div className="ai-container">
-        {/* Back button and theme toggle at the top */}
-        <div className="flex justify-between items-center mb-8">
-          <button 
-            onClick={goBack} 
-            className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
-          >
-            <ArrowLeft className="h-5 w-5" />
-            <span>Grįžti atgal</span>
-          </button>
-          <ThemeToggle />
-        </div>
 
         <div className="max-w-xl mx-auto text-center">
           <h2 className="ai-section-title text-3xl md:text-4xl mb-6">📩 Registracija</h2>
