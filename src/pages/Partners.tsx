@@ -9,6 +9,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Checkbox } from "@/components/ui/checkbox";
 import { db } from "@/lib/firebase";
 import { collection, addDoc, serverTimestamp, getDocs, query, where } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
+import ThemeToggle from "@/components/ThemeToggle";
+import { ArrowLeft } from "lucide-react";
 
 const LOCAL_REFERRAL_KEY = 'referral_by_email';
 
@@ -39,6 +42,7 @@ const Partners = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   // For instant check on registration email
   const [existingReferral, setExistingReferral] = useState<{ code: string; link: string } | null>(null);
@@ -47,6 +51,11 @@ const Partners = () => {
   // Referral statistics
   const [refStats, setRefStats] = useState<{ name: string; paid?: boolean }[]>([]);
   const [statsLoading, setStatsLoading] = useState(false);
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // Check localStorage and Firebase for referral on email input change
   useEffect(() => {
@@ -114,6 +123,10 @@ const Partners = () => {
     return code;
   };
 
+  const goBack = () => {
+    navigate(-1);
+  };
+
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -174,6 +187,17 @@ const Partners = () => {
   return (
     <div className="ai-container py-16 px-4">
       <div className="max-w-3xl mx-auto">
+        <div className="flex justify-between items-center mb-8">
+          <button 
+            onClick={goBack} 
+            className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
+          >
+            <ArrowLeft className="h-5 w-5" />
+            <span>Grįžti atgal</span>
+          </button>
+          <ThemeToggle />
+        </div>
+      
         <h1 className="text-4xl font-bold mb-8 text-center">Partnerių programa</h1>
         
         <Card className="p-6 mb-10">
@@ -184,7 +208,7 @@ const Partners = () => {
           
           <div className="bg-muted p-4 rounded-lg mb-6">
             <h3 className="font-bold text-xl mb-3">Ką siūlome:</h3>
-            <p className="mb-2">Už kiekvienus 2 žmones, kurie užsiregistruos per Tavo asmeninę nuorodą ar naudodami Tavo kodą, galėsi pasirinkti vieną iš šių dovanų:</p>
+            <p className="mb-2">Už kiekvienus 2 žmones, kurie užsiregistruos ir apmokės kursą naudodami Tavo asmeninę nuorodą ar referalo kodą, galėsi pasirinkti vieną iš šių dovanų:</p>
             <ul className="mb-4 space-y-2">
               <li className="flex items-center">
                 <div className="h-8 w-8 rounded-full bg-primary text-white flex items-center justify-center font-bold mr-2">1</div>
@@ -418,7 +442,6 @@ const Partners = () => {
             </div>
           </Card>
         )}
-
       </div>
     </div>
   );

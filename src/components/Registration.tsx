@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { checkAndStoreReferralCode } from '@/lib/referralUtils';
+import ThemeToggle from './ThemeToggle';
+import { ArrowLeft } from 'lucide-react';
 
 const Registration = () => {
   const [referral, setReferral] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Užtikrina, kad kodas bus paimtas iš URL arba sessionStorage
@@ -13,9 +16,25 @@ const Registration = () => {
 
   const registrationLink = referral ? `/registracija?ref=${referral}` : '/registracija';
 
+  const goBack = () => {
+    navigate(-1);
+  };
+
   return (
     <section id="register" className="ai-section ai-gradient-bg">
       <div className="ai-container">
+        {/* Back button and theme toggle at the top */}
+        <div className="flex justify-between items-center mb-8">
+          <button 
+            onClick={goBack} 
+            className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
+          >
+            <ArrowLeft className="h-5 w-5" />
+            <span>Grįžti atgal</span>
+          </button>
+          <ThemeToggle />
+        </div>
+
         <div className="max-w-xl mx-auto text-center">
           <h2 className="ai-section-title text-3xl md:text-4xl mb-6">📩 Registracija</h2>
           <p className="ai-section-subtitle text-xl mb-8">
@@ -62,7 +81,7 @@ const Registration = () => {
             </div>
           </div>
 
-          <p className="ai-card-desc">
+          <p className="ai-card-desc mb-4">
             Turite klausimų? Susisiekite el. paštu <a href="mailto:as.koncius@gmail.com" className="text-primary underline">as.koncius@gmail.com</a> arba telefonu <a href="tel:+37064300602" className="text-primary underline">+370 643 00602</a>
           </p>
         </div>

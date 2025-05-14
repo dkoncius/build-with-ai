@@ -101,7 +101,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-border mt-8 pt-8 text-center ai-card-desc text-sm">
-          <p>&copy; {new Date().getFullYear()} Build with AI. Visos teisės saugomos. <Link to="/dashboard" className="hover:text-primary opacity-50 hover:opacity-100 transition-opacity">•</Link></p>
+          <p>&copy; {new Date().getFullYear()} Build with AI. Visos teisės saugomos. <Link to="/dashboard" className="hover:text-primary opacity-50 hover:opacity-100 transition-opacity"><Brain className="h-4 w-4 inline-block" /></Link></p>
         </div>
       </div>
     </footer>
