@@ -47,8 +47,8 @@ const Instructor = () => {
               <div className="md:w-2/3 p-8">
                 <Tabs defaultValue="experience" className="w-full">
                   <TabsList className="w-full mb-6">
-                    <TabsTrigger value="experience" className="flex-1">Patirtis ir kvalifikacija</TabsTrigger>
-                    <TabsTrigger value="youtube" className="flex-1">YouTube pranešimai</TabsTrigger>
+                    <TabsTrigger value="experience" className="flex-1">Patirtis ir <br /> kvalifikacija</TabsTrigger>
+                    <TabsTrigger value="youtube" className="flex-1">YouTube <br /> pranešimai</TabsTrigger>
                   </TabsList>
                   
                   <TabsContent value="experience">
